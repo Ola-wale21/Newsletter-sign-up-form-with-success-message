@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Success</title>
+</head>
+<body>
+    <div class="landing-page">
+        <div class="success-text">
+            <img src="assets/images/icon-success.svg" alt="success">
+          <h1>Thanks for subscribing!</h1>
+          <p>A confirmation message has been sent to <span class="message"></span>. Please open it and click the button inside to confirm your subscription</p>
+        </div>
+        <button class="otherbutton">Dismiss message</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const email = localStorage.getItem("email");
+        document.querySelector(".message").innerText = email;
+        })
+    </script>
+<script src="index.js" charset="UTF-8"></script>
+</body>
+</html>
